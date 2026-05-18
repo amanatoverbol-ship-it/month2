@@ -5,10 +5,10 @@ class Person:
         self.__occupation = occupation
         self.__higher_education = higher_education
     @property
-    def occupation(self):  # метод без скобок при вызове!
+    def occupation(self):
         return self.__occupation
     @property
-    def higher_education(self):  # метод без скобок при вызове!
+    def higher_education(self):
         return self.__higher_education
     def introduce(self):
         if self.higher_education:
@@ -21,7 +21,7 @@ class Classmate(Person):
         super().__init__(name, birth_date, occupation, higher_education)
         self.group_name = group_name
     def introduce(self):
-        if self.higher_education:  # используй property!
+        if self.higher_education:
             print("У меня есть высшее образование")
         else:
             print("У меня нет высшего образования")
@@ -32,7 +32,7 @@ class Friend(Person):
         super().__init__(name, birth_date, occupation, higher_education)
         self.hobby = hobby
     def introduce(self):
-        if self.higher_education:  # используй property!
+        if self.higher_education:
             print("У меня есть высшее образование")
         else:
             print("У меня нет высшего образования")
